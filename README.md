@@ -6,6 +6,7 @@
 ![avatar](image/css_check.png)  
 
 # preview of work:  
+## page1:
 ![avatar](image/pie_page1.png)  
-
+## page2:
 ![avatar](image/pie_page2.png)  

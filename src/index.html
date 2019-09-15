@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css" media="screen"/>
 	<title> Index </title>
-	<h1 align="center"><a href="pie.html">Gramma's Pie</a></h1>
 </head>
+
 <body>
-	<img src="http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie.jpg" style="position: relative;left: 43%;top: 30%;" />
+	<h1><a href="pie.html">Gramma's Pie</a></h1>
+	<img src="http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie.jpg" alt="pie" style="position: relative;left: 43%;top: 30%;" />
+	<p>To gain today's tasty, Gramma's pie!
+	<br/>
+	U can have an unprecedented taste experience.
+	<br/>
+	It's crispy on the outside,and soft on the inside. People are unable to stop even though they want to!
+	</p><hr/>
+
+	<DIV id=demo>
+	<table>
+	<tr>
+	<td id=demo1>
+
+	<table>
+	<tr>
+	<td>
+	<a href="http://tech.ifeng.com/a/20180807/45107110_0.shtml">
+	<img src="pie4.jpg" alt="pie1" /></a>
+	</td>
+	<td>
+	<a href="https://tw.stockfresh.com/image/2667100/apple-pie">
+	<img src="pie1.png" alt="pie2" /></a>
+	</td>
+	<td>
+	<a href="http://www.tingclass.net/show-9074-270373-1.html">
+	<img src="pie3.jpg" alt="pie3" /></a>
+	</td>
+	</tr>
+	</table>
+
+	</td>
+	<TD id=demo2></TD>
+	</tr>
+	</table>
+	</DIV> 
+
+	<SCRIPT>
+	var speed=30//速度数值越大速度越慢
+	var demo2 = document.getElementById("demo2");
+	var demo = document.getElementById("demo");
+	var demo1 = document.getElementById("demo1");
+	demo2.innerHTML=demo1.innerHTML
+	function Marquee(){
+	if(demo2.offsetWidth-demo.scrollLeft<=0)
+	demo.scrollLeft-=demo1.offsetWidth
+	else{
+	demo.scrollLeft++
+	}
+	}
+	var MyMar=setInterval(Marquee,speed)
+	demo.onmouseover=function() {clearInterval(MyMar)}
+	demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+	</SCRIPT>
 </body>
 </html>
